@@ -3,18 +3,19 @@
 <head>
   {%- block head %}
   <meta charset="utf-8">
-  <title>{% block title %}TODO{% endblock %}</title>
+  <title>{% block title %}Review{% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='template/index.html')}}">
   {% endblock -%}
 </head>
 <body>
 <div class="container">
 {% block container %}{% endblock %}
-{% block script %}{% endblock %}
 </div>
+{% block script %}{% endblock %}
 </body>
 </html>

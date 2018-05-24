@@ -1,12 +1,12 @@
 from . import db
 
 
-class Item(db.Model):
-    """List item."""
+class Review(db.Model):
+    """Review item."""
     __tablename__ = 'items'
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(64))
-    done = db.Column(db.Boolean, default=False)
+    movie = db.Column(db.String(64))
+    message = db.Column(db.String(256))
 
     def __repr__(self):
-        return '<Item: {} - {}>'.format(self.id, self.title)
+        return '<Review: {} - {}>'.format(self.id, self.movie)
